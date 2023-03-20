@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeno desafio</title>
+    <style>
+        div#result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imigração</h1>
+    <strong>De que país você vem? </strong><input type="text" pattern="([aA-zZ]+)" name="txtpais" id="txtpais" placeholder="Digite seu país" >
+    <input type="submit" value="Verificar" onclick="identificar ()">
+    <div id="result">Resultado</div>
+    
+    
+    
+    <script>
+        function identificar() {
+            var txtpais = window.document.getElementById('txtpais')
+            //var result = window.document.querySelector('div#result')  ESSA É UMA OPÇÃO
+            var result = window.document.getElementById('result')
+            result.innerHTML = `<p>Você vem do(a): ${txtpais.value}.</p>`
+            if (txtpais.value == 'Brasil'){
+                result.innerHTML += `<p>Você é Brasileiro, dirija-se ao guichê nacional.</p>`
+            }
+            else {
+                result.innerHTML += `<p>Você é estrangeiro, dirija-se ao guichê internacional.</p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
