@@ -1,13 +1,9 @@
 @charset "UTF-8";
 
-* {
-    margin: 0px;
-    padding: 0px;
-}
 
 body {
     background-color: rgb(70, 142, 236);
-    font: normal 15 pt Arial;
+    font: normal 15pt Arial;
 }
 
 header {
@@ -29,4 +25,7 @@ footer {
     color: white;
     text-align: center;
     font-style: italic;
+}
+div#res {
+    text-align: center;
 }
